@@ -3,18 +3,21 @@ import random
 
 class Band(object):
     def __init__(self, sounds):
-        self.members {}
+        self.members = {}
 
     def hire(self):
         new_member = input("Whats the new members name?")
-        member_type = input"What does the member play?"
-            if member_type == "bass"
-                self.members[new_member] = Bassist()
-            elif member_type == "guitar"
-                self.members[new_member] == Guitarist()
-                
-        
-
+        member_type = input("What does the member play?")
+        if member_type == "bass":
+            self.members[new_member] = Bassist()
+        elif member_type == "guitar":
+            self.members[new_member] == Guitarist()
+        else:
+            member_type == "drums"
+            self.members[new_member] == Drummer() 
+    
+    def fire(self, fired_member):
+        del self.members[fired_member]
 
 class Musician(object):
     def __init__(self, sounds):
@@ -53,20 +56,21 @@ class Drummer(Musician):
             
 
         
-nigel = Guitarist()
-nigel.solo(6)
-nigel.tune()
+def main():
+  trementina = Band()
+  trementina.hire()
+  trementina.hire("Ralph")
+  trementina.hire()
+  trementina.fire("Ralph")
+  print (trementina.members)
+  acdc.play_solos(6)
 
-bonham = Drummer()
-bonham.count()
-bonham.solo(5)
-bonham.combust()
+# def main()
+#def main():
+#   results = find_preference()
+#    print("\nGreat! Based on your choices, I recommend a cocktail with a:")
+#    for drink in make_drink(results):
+#        print("    " + drink)    
 
-eddie = Bassist()
-eddie.solo(5)
-
-def main()
-    
-
-if __name__ == "__main__":
-    main() 
+#if __name__ == "__main__":
+#    main()  
